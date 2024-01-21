@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receiver Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: left; /* Align text to the left */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 450px; /* Increased width */
+            margin: auto; /* Center the container */
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            margin-bottom: 40px;
+            font-size: 35px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            color: #F05941;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #BE3144;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #BE3144;
+        }
+
+        p {
+            margin-top: 15px;
+            color: #555;
+        }
+
+        a {
+            color: #F05941;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Receiver Registration</h2>
+        <form action="register_receiver.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="blood_group">Blood Group:</label>
+            <input type="text" id="blood_group" name="blood_group" required>
+
+            <input type="hidden" name="user_type" value="receiver">
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="receiver_login.html">Login here</a></p>
+    </div>
+</body>
+</html>
